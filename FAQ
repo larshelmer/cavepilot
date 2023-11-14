@@ -1,0 +1,156 @@
+Frequently (hmm...) Asked Questions for Cavepilot
+
+-- General
+
+1. You're levels are ugly beyond all recognition!
+
+Yes. Draw prettier ones, or put up with them.
+
+2. I want to use png/gif/jpg/whatever for my levels!
+   Why do they have to be bmps?
+
+Because using other image formats would require
+another dependency. As things are right now, I see
+no point in adding dependencies to cavepilot just
+to support more image formats. On the other hand,
+if you draw me enough levels to make the size of
+bmps matter, I just might reconsider.
+
+3. I want sound!
+
+I am from time to time pestering a friend about
+this. It might happen sooner or later. If you're
+tired of waiting and feel like doing something
+about it, drop me a line.
+
+4. How come the ships looks at least alright, when
+the levels sucks?
+
+I actually learned to use POVRay <http://www.povray.org>
+a bit to render them. It turned out ok I think.
+
+5. Cool! Can you teach me POVRay?
+
+No. What little I knew is completely lost in the mists
+of my memory.
+
+6. I want more types of weapons!
+
+It is not a high priority at the moment. When the basics
+are stable I am considering to add all the classic Turbo
+Raketti weapons, but anything beyond that is most likely
+looking into the very distant future.
+
+7. I want more eye candy!
+
+See q. 6, and add lots of distance.
+
+8. I want feature X.
+
+Drop me a line, and we'll see. If it implies new
+dependencies, don't get your hopes up.
+
+9. I've found a bug!
+
+Great! Send me a description detailed enough so I can
+reproduce it.
+
+10. I've made a patch for a bug I found.
+
+Great! Send me the patch together with the exact
+command needed to apply it...
+
+11. Are you serious? Can't you use the excellent
+    patch utility?
+
+Yes, more or less. It's shaky to say the least. But
+send me enough patches and I'll probably learn.
+
+12. Hey! I can make a better website for the game!
+
+Great. Me too. But help is of course always appreciated.
+
+13. What platform do you use for development?
+
+I use Crux linux <http://crux.nu> on my 800 MHz PIII.
+
+14. How do you build the Windows version?
+
+I use cygwin <http://www.cygwin.com> on my parents
+computer.
+
+15. Do you mean you don't have Windows installed at all?
+
+Yes. Installing Windows just to build cavepilot once in
+a while seems like a waste of diskspace
+
+16. Then why don't you cross-compile?
+
+Because I don't know how and don't feel like learning.
+
+17. I've got this great idea idea for a game, will you
+    code it?
+
+Looking at the release frequency of cavepilot it doesn't
+seem very probable, now does it?
+
+18. But I'll pay you!
+
+Keep talkin'...
+
+19. Do you like single malt whisky?
+
+Yes. And judging by where the quality of this FAQ is
+heading I probably shouldn't have another one.
+
+-- Version 0.5.0 and onwards
+
+1. I've found a bug in the console. When I type
+   /[something weird] it behaves just as if I type
+   /[some command].
+
+This is a feature. There are potentially lots of wierd
+looking aliases for most commands. Check the function
+parseInput () in Console.cc for a more in-depth explanation.
+Note that there are also a few planned aliases (like
+/color for /colour and so on...).
+
+2. I am evil and set the port to 666, but it doesn't work!
+
+In general you need extra (e.g., root) priviligies to use
+a port under 1024. But since there are 65000+ ports available
+in total, there should normally be some other port that
+isn't in use.
+
+3. I am behind a firewall and clients cannot connect to my
+   server!
+
+Cavepilot defaults to port 42013 (which in very rare cases
+might collide with development versions of the Stepney
+webserver, but that is most likely not the case here). So
+either you configure your firewall to let connection attempts
+through on this port, or you play as client instead.
+
+4. Why did you drop two players locally for this version?
+
+Because it would add lots of exceptions to the code, and
+IMHO the 0.3.x branch supports two players well enough.
+Moreover I really feel like focusing on the network play
+this time around.
+
+5. Why did it take so long to get a version supporting
+   network play released?
+
+The short answer is that I am lazy. The long answer is
+that I first spent some time integrating peer to peer
+play in the old code base, what was to become 0.4.0. But
+this ended up a serious mess, so I dropped it. A while
+later I slowly started a rewrite with a client-server
+approach instead. But due to the ill-planned and to
+infrequent coding for me to remember what I was up to
+the last time, this ended up a mess too. So after yet
+another while I started a more planned rewrite, picking
+up the pace a bit this time. This brings us up to date.
+
+
+Lars Helmer <lasso at spacecentre.se>

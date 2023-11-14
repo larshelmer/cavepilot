@@ -1,0 +1,112 @@
+README for Cavepilot
+http://cavepilot.spacecentre.se
+======================================================
+
+Cavepilot is a cave-flying game much like the classics
+Turbo Raketti and Gravity Force. Examples of modern
+counterparts are Turbis and Luola. Cavepilot currently
+only supports one (which is rather boring) or two
+player games on a split screen. Some sort of network
+play is in the planning stage though.
+
+
+See the file INSTALL for installation instructions.
+
+
+Playing the game
+======================================================
+
+The game features a menu where the game can be started,
+exited and configured. At this moment only the most
+relevant parameters can be configured. Please note that
+the configuration is _not_ saved between sessions.
+
+For permanent configuration you have to edit the file
+cavepilotrc[.txt if you are using windows]. See below.
+
+A game can be aborted at any instant by pressing the
+ESC key. This key can also be used for moving up among
+the menus, or to exit if at the top-level menu.
+
+The player controls can only be set in the menus. The
+defaults are:
+
+Player 1:
+turn left:    left arrow
+turn right:   right arrow
+thrust:       spacebar
+fire gatling: up arrow
+fire rocket:  down arrow
+Player 2:
+turn left:    c
+turn right:   b
+thrust:       left ctrl
+fire gatling: f
+fire rocket:  v
+
+Other keys are the s key for taking a screenshot.
+The screenshot is saved as 'screenshot.bmp' in the
+cavepilot directory. Beware that this is only a
+temporary solution and a screenshot will over-write
+any previous one.
+
+The status display at the bottom of each players part of
+the screen shows from left to right: lives left, current
+shield, fuel, gatling ammo, and rocket ammo.
+
+
+Configuration
+======================================================
+
+Most settings can be changed in the cavepilotrc file.
+The current values are also the defaults that are set
+if the file is missing. Beware that most of these values
+have no limits, and I take no responsibilty what so ever
+for the games behaviour upon any extreme values set here!
+
+Here you also set which level the game will load. The
+default level is called "masterpiece", but its not very
+pretty. Luckily, there is now an other option. Available
+levels are the *.lvl files in the levels/ dir. 
+
+
+Creating your own levels
+======================================================
+
+Creating levels on your own and sending them to me for
+distribution with the game is greatly encouraged! ;)
+
+It is really no complex matter at all. Just draw a level,
+preferably as big as possible, but no less than 800x600.
+Just beware that cavepilot uses a 16 bpp (Hi-colour)
+display, so the number of colours are not unlimited.
+Save the map as a bmp file (other formats will most
+likely be supported later). The map should have at least
+two bases looking however they want as long as their
+surface is flat. Next create a collision-map. It must
+be exactly the same size as the original map, but using
+only two colours -- black and white. Black is for everywhere
+on the original map that are free for flying, and white
+is for everywhere the ships can crash into (including the
+bases!). The final step is to create a level-file. It is
+rather simple. The file levels/masterpiece.lvl is a
+well commented example. Just beware that the 'players'
+parameter specifies how many bases are defined below it.
+Further on, the relative path from the game's directory
+(e.g., top-level of the distribution) to the image files
+must be specified. Take the demo-level "masterpiece" as
+example: it is specified as the level of choice in
+cavepilotrc on the line 'level: masterpiece.lvl'
+and in that file, the image and collsion-maps are specified
+as 'levels/...'. Its as simple as that.
+
+Please note: for windows users, the level files are from
+now on called blah.lvl.txt. The .txt suffix is optional
+in the levelname in the cavepilotrc file though.
+
+Moreover, the optional fields in the .lvl file is at the
+moment not used at all. The name displayed in the menu is
+just the filename without the .lvl suffix. But this may
+change at any time in the future.
+
+Have fun!

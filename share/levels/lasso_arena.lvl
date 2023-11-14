@@ -1,0 +1,16 @@
+# Copyright (C) 2003 Lars Helmer, see COPYING for details
+
+# "lasso arena" level by king lasso
+# somewhat influenced by a level for turbis that i don't
+# remember the exact name of.
+name: lasso arena
+image: lasso_arena.bmp
+map: arena_coll.bmp
+version: 1.0
+author: king lasso
+players: 4
+# the values are <starting x coord> <ending x coord> <SURFACE y coord>
+base: 199 300 498
+base: 700 801 498
+base: 449 550 198
+base: 449 550 798

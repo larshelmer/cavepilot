@@ -1,0 +1,13 @@
+
+# By Tom 7.
+
+name: level
+image: tom7.bmp
+map: tom7.map
+version: 1.0
+author: Tom 7
+players: 2
+
+# the values are <starting x coord> <ending x coord> <SURFACE y coord>
+base: 174 324 158
+base: 696 846 300

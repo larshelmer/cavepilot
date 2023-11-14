@@ -1,0 +1,109 @@
+-- Changelog for Cavepilot --
+
+
+Version 0.3.1: Released 20031113
+--------------------------------
+* Added the level "the bana" by Aino Soininen (Thank you, my love!)
+* Fixed a typo in Makefile
+
+Version 0.3.0: Released 20030707
+--------------------------------
+* Changed to the c++ include counterparts
+* Level can be selected in the menu
+* One shot - one kill is possible
+
+Version 0.2.1: Released 20030705
+--------------------------------
+* Exit clean-up (e.g., freeing resources properly)
+* Level.cpp cleanup
+* Removed the need for level-path in cavepilotrc
+* Levels remain in memory even when returning to the menu
+* The bases do _not_ cycle when returning to the menu
+* Added some missing #includes (Thanks to Peter Österlund)
+* Really make sure the event queue is flushed when returning to the menu
+
+Version 0.2.0: Released 20030704
+--------------------------------
+* The scrolltext actually allocates space for the text
+* If the level can't be loaded the game returns to the menu
+* Added the hideous level "lasso arena" featuring 4 bases
+* Menu typo correction (Thanks Pirx)
+* Moving back in the menues positions the selection correctly
+* Cycle bases actually follows the setting
+
+Version 0.2.0-rc1: Released 20030703
+------------------------------------
+* Added the tool nlconv to fix up the textfiles for windows-users
+* Automagically searches for level files with a .txt suffix if needed
+* The opponent ship doesn't show up outside a players view
+* Limit player name length
+* Added starfield.cpp and text.cpp for the menu
+* Menu and ability to play again without restarting added
+* Added an option to cycle the players starting bases
+* Configuration can be done through the menu
+* Removed the #defines for the player controls
+
+Version 0.1.2 - "krysset": Released 20030622
+--------------------------------------------
+* Standard window-close now works (for you only, dear brother ;)
+
+Version 0.1.1: Released 20030621
+--------------------------------
+* Added the level "level" by Tom 7. Thank you! :)
+* Fixed segmentation fault when the levelfile wasn't found
+* No contradicting error messages on levelfile failures
+* The explosions fading are timing-dependent
+* Delete particles when they travel outside the level
+
+Version 0.1.0: Released 20030620
+--------------------------------
+* Some code cleanups in player.cpp
+* Consistent weight calculations
+
+Version 0.1.0-rc4: Released 20030619
+------------------------------------
+* Fixed major timing issue
+* Bugfix in the new shot calculations
+* Made air-resistance timing-dependent
+* REALLY fixed the timing!
+* A ship cannot collide with an invisible respawning ship...
+
+Version 0.1.0-rc3: Released 20030617
+------------------------------------
+* Change the player controls to #defines in classes.hh
+* The different players can now have the same colour
+* Added the README and INSTALL files
+* It gives a message if the configuration file couldn't be loaded
+* Removed all occurences of strsep
+* A new attempt at calculating the shots angles and speeds
+
+Version 0.1.0-rc2: Released 20030616
+------------------------------------
+* Fixed repair before first take-off
+* A ship can be hit by shots while on the base
+
+Version 0.1.0-rc1: Released 20030615
+------------------------------------
+* A ship can be detroyed on the base
+* Code cleanups in player.cpp
+* Support for two players!
+* The winner is typed out upon exit
+
+Version 20030615-1: Released 20030615
+-------------------------------------
+* Shots now vanish when their speed is low enough
+* Game configurable through the file cavepilotrc without recompiling
+* A ship only reloads on his home base
+
+Version 20030614-3: Released 20030614
+-------------------------------------
+* Bugfix in the new collision detection
+
+Version 20030614-2: Released 20030614
+-------------------------------------
+* Support for the '-v' and '--version' command line parameters
+* Another attempt at particle->ship collision detection
+
+Version 20030614-1: Released 20030614
+-------------------------------------
+* First versioned release

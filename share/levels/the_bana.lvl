@@ -1,0 +1,10 @@
+# Copyright (C) 2003 Aino Soininen, see COPYING for details
+
+name: the bana
+image: the_bana.bmp
+map: the_collision.bmp
+version: 1.0
+author: aino soininen
+players: 2
+base: 610 652 202
+base: 835 875 589

@@ -1,0 +1,22 @@
+# Copyright (C) 2003 Lars Helmer, see COPYING for details
+
+# masterpiece level by king lasso
+# only the first field of each typ is processed (except for 'base')
+# the player keyword must preceed the bases
+# number of bases must be equal to the number of players
+# all field names (e.g., left of ':') must be lower-case
+# all constraints implies that i am lazy. which is correct
+# optional field:
+name: masterpiece
+image: masterpiece.bmp
+# white color in the map will cause collision, black is free for flying
+# don't be confused by the extension, it is still only a bmp file
+map: masterpiece.map
+# optional field:
+version: 1.0
+# optional field:
+author: king lasso
+players: 2
+# the values are <starting x coord> <ending x coord> <SURFACE y coord>
+base: 95 200 519
+base: 495 600 165
